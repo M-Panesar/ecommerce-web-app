@@ -15,7 +15,7 @@ dotenv.config()
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://mahikapanesar:2002password2606@cluster0.5vvclgv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.5vvclgv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 
 
 app.get("/",(req,res)=>{
